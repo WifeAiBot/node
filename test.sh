@@ -47,6 +47,7 @@ do
   
   # Commit the change with the random message
   git commit -m "$commit_message"
+  git push origin main
   
   # Rename the file for the next iteration
   mv $new_file_name $file_name
