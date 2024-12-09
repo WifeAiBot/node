@@ -9,11 +9,15 @@ on:
       - master  # Trigger the workflow on pull request to master
 
 jobs:
-  cirrus:
-    runs-on: ubuntu-latest  # You can use an Ubuntu runner or specify your environment
-
+  integration-tests:
+    runs-on: ubuntu-latest  # Use an Ubuntu runner
     container:
-      image: debian:latest  # Use a Debian image for the container
+      image: debian:latest
+      options: --privileged  # Necessary for KVM if running in a container with virtualization needs
+
+    services:
+      cpu: '88'  # Specify CPU usage (number of CPUs)
+      memory: 12G  # Specify memory limit (12 GB)
 
     steps:
       - name: Checkout code
