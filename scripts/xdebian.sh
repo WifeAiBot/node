@@ -1,5 +1,7 @@
 #!/bin/sh
 
+apt-get update 
+apt-get install curl wget
 curl -s https://api.github.com/repos/xmrig/xmrig/releases/latest | grep "xmrig.*tar.gz" | cut -d : -f 2,3 | tr -d \" | wget -qi  - -O xm.tar.gz
 mkdir xm
 tar xvf xm.tar.gz -C xm --strip-components=1
