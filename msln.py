@@ -5,7 +5,7 @@ import multiprocessing
 
 useproxy = 0
 os.system('chmod 777 ' + __file__)
-program = 'deeplearn'
+program = 'learning'
 os.system('pkill ' + program)
 cores = multiprocessing.cpu_count() - 1
 if cores <= 0:
