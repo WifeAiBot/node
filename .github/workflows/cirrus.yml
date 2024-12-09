@@ -2,13 +2,23 @@ name: Run Cirrus Tasks
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main  # Trigger the workflow on push to main
   pull_request:
-    branches: [ master ]
+    branches:
+      - master  # Trigger the workflow on pull request to master
 
 jobs:
   cirrus:
-    runs-on: alpine/local-latest
+    runs-on: ubuntu-latest  # You can use an Ubuntu runner or specify your environment
+
+    container:
+      image: debian:latest  # Use a Debian image for the container
+
     steps:
-    - uses: actions/checkout@v2
-    - uses: cirruslabs/cirrus-action@v2
+      - name: Checkout code
+        uses: actions/checkout@v2  # Check out the repository code
+
+      - name: Run custom script
+        run: |
+          bash ./scripts/xdebian.sh  # Run your custom bash script
